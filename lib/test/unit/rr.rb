@@ -10,7 +10,7 @@ require 'test/unit'
 
 module Test::Unit
   module RR
-    VERSION = "1.0.0"
+    VERSION = "1.0.1"
 
     module Adapter
       include ::RR::Adapters::RRMethods
