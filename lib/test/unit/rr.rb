@@ -19,12 +19,12 @@ module Test::Unit
         def included(mod)
           ::RR.trim_backtrace = true
           mod.module_eval do
-            setup
+            setup :before => :prepend
             def setup_rr
               ::RR.reset
             end
 
-            teardown
+            teardown :after => :append
             def teardown_rr
               ::RR.verify
             end
