@@ -24,9 +24,13 @@ module Test::Unit
               ::RR.reset
             end
 
-            teardown :after => :append
-            def teardown_rr
-              ::RR.verify
+            cleanup :after => :append
+            def cleanup_rr
+              begin
+                ::RR.verify
+              rescue ::RR::Errors::RRError => exception
+                add_failure(exception.message, exception.backtrace)
+              end
             end
           end
         end
