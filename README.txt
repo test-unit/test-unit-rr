@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-Test::Unit::RR - RR adapter for Test::Unit.
+test-unit-rr - RR adapter for Test::Unit.
 
 == FEATURES/PROBLEMS:
 
