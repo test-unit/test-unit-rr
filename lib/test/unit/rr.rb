@@ -6,7 +6,7 @@
 # License:: Ruby license.
 
 require 'rr'
-require 'test/unit'
+require 'test-unit'
 
 module Test::Unit
   module RR
