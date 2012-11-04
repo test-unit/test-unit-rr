@@ -10,6 +10,9 @@ test-unit-rr
 
 test-unit-rr is a RR adapter for test-unit.
 
+You don't need RR setup codes with test-unit-rr. You just require
+"test/unit/rr".
+
 ## Install
 
     % gem install test-unit-rr

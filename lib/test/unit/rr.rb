@@ -16,11 +16,10 @@
 
 require 'rr'
 require 'test-unit'
+require "test/unit/rr/version"
 
 module Test::Unit
   module RR
-    VERSION = "1.0.2"
-
     module Adapter
       include ::RR::Adapters::RRMethods
 
