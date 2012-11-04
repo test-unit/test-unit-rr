@@ -1,5 +1,20 @@
 # News
 
+## 1.0.2: 2012-11-04
+
+### Improvements
+
+* Added `assert_rr`.
+
+### Fixes
+
+* Fixed wrong license notation in source header.
+  [Reported by mtasaka] [GitHub#1]
+
+### Thanks
+
+* mtasaka
+
 ## 1.0.1: 2011-02-09
 
 ### Improvements
