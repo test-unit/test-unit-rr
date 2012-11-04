@@ -53,6 +53,45 @@ module Test::Unit
       def assert_received(subject, &block)
         block.call(received(subject)).call
       end
+
+      # Verify double declarations by RR in block. It is useful to
+      # clear your double declarations scope.
+      #
+      # @example Success case
+      #   assert_rr do
+      #     subject = Object.new
+      #     assert_rr do
+      #       mock(subject).should_be_called
+      #       subject.should_be_called
+      #     end
+      #   end
+      #
+      # @example Failure case
+      #   assert_rr do
+      #     subject = Object.new
+      #     assert_rr do
+      #       mock(subject).should_be_called
+      #       # subject.should_be_called
+      #     end
+      #   end
+      #
+      # @yield
+      #   declares your doubles and uses the doubles in the block. The
+      #   doubles are verified before and after the block is called.
+      def assert_rr
+        begin
+          ::RR.verify
+        ensure
+          ::RR.reset
+        end
+        result = yield
+        begin
+          ::RR.verify
+        ensure
+          ::RR.reset
+        end
+        result
+      end
     end
   end
 
