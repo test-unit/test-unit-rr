@@ -36,9 +36,9 @@ Gem::Specification.new do |spec|
   description = clean_white_space.call(entries[entries.index("Description") + 1])
   spec.summary, spec.description, = description.split(/\n\n+/, 3)
   spec.license = "LGPLv2 or later"
-  spec.files = ["README.md", "Rakefile", "COPYING"]
-  spec.files += ["#{spec.name}.gemspec", "Gemfile"]
+  spec.files = ["README.md", "Rakefile", "#{spec.name}.gemspec", "Gemfile"]
   spec.files += Dir.glob("lib/**/*.rb")
+  spec.files += Dir.glob("doc/text/**/*.*")
   spec.test_files += Dir.glob("test/**/*")
 
   spec.add_dependency("test-unit", ">= 2.1.2")
