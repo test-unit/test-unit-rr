@@ -38,10 +38,13 @@ module Test::Unit
             end
 
             exception_handler do |test_case, exception|
-              return false unless exception.is_a?(::RR::Errors::RRError)
-              test_case.problem_occurred
-              test_case.add_failure(exception.message, exception.backtrace)
-              true
+              target_p = exception.is_a?(::RR::Errors::RRError)
+              if target_p
+                test_case.problem_occurred
+                test_case.add_failure(exception.message, exception.backtrace)
+              end
+              handled = target_p
+              handled
             end
           end
         end
