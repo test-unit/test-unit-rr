@@ -8,5 +8,7 @@ rvm:
 notifications:
   recipients:
     - kou@clear-code.com
-script:
-  - bundle exec rake --trace
+matrix:
+  allow_failures:
+    - rvm: rbx
+    - rvm: ruby-head
