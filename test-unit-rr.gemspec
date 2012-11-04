@@ -41,7 +41,7 @@ Gem::Specification.new do |spec|
   spec.files += Dir.glob("doc/text/**/*.*")
   spec.test_files += Dir.glob("test/**/*")
 
-  spec.add_dependency("test-unit", ">= 2.1.2")
+  spec.add_dependency("test-unit", ">= 2.5.2")
   spec.add_dependency("rr", ">= 1.0.2")
 
   spec.add_development_dependency("bundler")
