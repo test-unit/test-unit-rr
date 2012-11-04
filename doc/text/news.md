@@ -1,12 +1,12 @@
-=== 1.0.1 / 2011-02-09
+# News
 
-* 1 major enhancement
+## 1.0.1: 2011-02-09
 
-  * run setup for RR before test case's setup and teardown
-    for RR after test cases' teardown.
+### Improvements
 
-=== 1.0.0 / 2011-02-09
+* run setup for RR before test case's setup and teardown
+  for RR after test cases' teardown.
 
-* 1 major enhancement
+## 1.0.0: 2011-02-09
 
-  * Birthday!
+The first release!!!
