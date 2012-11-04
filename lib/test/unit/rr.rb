@@ -34,26 +34,21 @@ module Test::Unit
 
             cleanup :after => :append
             def cleanup_rr
-              Adapter.handle_error(self) do
-                ::RR.verify
-              end
+              ::RR.verify
             end
-          end
-        end
 
-        def handle_error(test_case)
-          begin
-            yield
-          rescue ::RR::Errors::RRError => exception
-            test_case.add_failure(exception.message, exception.backtrace)
+            exception_handler do |test_case, exception|
+              return false unless exception.is_a?(::RR::Errors::RRError)
+              test_case.problem_occurred
+              test_case.add_failure(exception.message, exception.backtrace)
+              true
+            end
           end
         end
       end
 
       def assert_received(subject, &block)
-        Adapter.handle_error(self) do
-          block.call(received(subject)).call
-        end
+        block.call(received(subject)).call
       end
     end
   end
