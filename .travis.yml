@@ -7,7 +7,7 @@ rvm:
   - ruby-head
 notifications:
   recipients:
-    - kou@clear-code.com
+    - travis@clear-code.com
 matrix:
   allow_failures:
     - rvm: rbx
