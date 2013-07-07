@@ -1,6 +1,6 @@
 # -*- mode: ruby; coding: utf-8 -*-
 #
-# Copyright (C) 2012  Kouhei Sutou <kou@clear-code.com>
+# Copyright (C) 2012-2013  Kouhei Sutou <kou@clear-code.com>
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -42,7 +42,7 @@ Gem::Specification.new do |spec|
   spec.test_files += Dir.glob("test/**/*")
 
   spec.add_dependency("test-unit", ">= 2.5.2")
-  spec.add_dependency("rr", ">= 1.0.2")
+  spec.add_dependency("rr", ">= 1.1.1")
 
   spec.add_development_dependency("bundler")
   spec.add_development_dependency("rake")

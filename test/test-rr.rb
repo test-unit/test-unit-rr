@@ -1,4 +1,4 @@
-# Copyright (C) 2012  Kouhei Sutou <kou@clear-code.com>
+# Copyright (C) 2012-2013  Kouhei Sutou <kou@clear-code.com>
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -30,7 +30,7 @@ class RRTest < Test::Unit::TestCase
       stub(subject).should_be_called
       stub(subject).should_not_be_called
       subject.should_be_called
-      assert_raise(::RR::Errors::SpyVerificationErrors::InvocationCountError) do
+      assert_raise(Test::Unit::AssertionFailedError) do
         assert_received(subject) do |_subject|
           _subject.should_not_be_called
         end
