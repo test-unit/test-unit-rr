@@ -8,6 +8,6 @@ env:
 notifications:
   recipients:
     - commit@clear-code.com
-matrix:
-  allow_failures:
-    - rvm: rbx
+# matrix:
+#   allow_failures:
+#     - rvm: rbx
