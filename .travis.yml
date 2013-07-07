@@ -1,14 +1,12 @@
 rvm:
-  - 1.8.7
   - 1.9.3
+  - 2.0.0
   - rbx
   - ree
   - jruby
-  - ruby-head
 notifications:
   recipients:
     - commit@clear-code.com
 matrix:
   allow_failures:
     - rvm: rbx
-    - rvm: ruby-head
