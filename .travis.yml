@@ -2,7 +2,6 @@ rvm:
   - 1.9.3
   - 2.0.0
   - rbx
-  - ree
   - jruby
 env:
   - JRUBY_OPTS="-Xcext.enabled=true"
