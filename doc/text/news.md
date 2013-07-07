@@ -1,5 +1,16 @@
 # News
 
+## 1.0.3: 2013-07-07
+
+### Improvements
+
+* Supported rr 1.1.1 or later. Older rr support is dropped.
+  [Reported by Youhei SASAKI] [GitHub#2]
+
+### Thanks
+
+* Youhei SASAKI
+
 ## 1.0.2: 2012-11-04
 
 ### Improvements
