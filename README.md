@@ -1,6 +1,6 @@
 # README
 
-http://test-unit.rubyforge.org/#test-unit-rr
+http://test-unit.github.io/#test-unit-rr
 
 ## Name
 
