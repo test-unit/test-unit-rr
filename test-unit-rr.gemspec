@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.name = "test-unit-rr"
   spec.version = Test::Unit::RR::VERSION.dup
   spec.rubyforge_project = "test-unit"
-  spec.homepage = "http://test-unit.rubyforge.org/#test-unit-rr"
+  spec.homepage = "https://github.com/test-unit/test-unit-rr"
   spec.authors = ["Kouhei Sutou"]
   spec.email = ["kou@clear-code.com"]
   readme = File.read("README.md")
