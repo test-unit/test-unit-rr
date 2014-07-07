@@ -1,6 +1,6 @@
 # README
 
-http://test-unit.github.io/#test-unit-rr
+https://github.com/test-unit/test-unit-rr
 
 ## Name
 
