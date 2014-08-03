@@ -1,5 +1,7 @@
 --title --test-unit-rr
 --readme README.md
+--markup markdown
+--markup-provider kramdown
 --files doc/text/**/*.*
 --output-dir doc/reference/en
 --charset utf-8
