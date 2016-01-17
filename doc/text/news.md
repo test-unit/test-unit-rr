@@ -1,5 +1,12 @@
 # News
 
+## 1.0.4: 2016-01-17 {#version-1-0-4}
+
+### Improvements
+
+* Added a workaround for RR's auto testing framework adaptation.
+  TODO: It should be fixed in RR.
+
 ## 1.0.3: 2013-07-07
 
 ### Improvements
