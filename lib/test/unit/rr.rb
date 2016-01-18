@@ -24,7 +24,11 @@ require "test/unit/rr/version"
 module Test::Unit
   module RR
     module Adapter
-      include ::RR::Adapters::RRMethods
+      if ::RR.const_defined?(:DSL)
+        include ::RR::DSL
+      else
+        include ::RR::Adapters::RRMethods
+      end
 
       class << self
         def included(mod)
