@@ -32,11 +32,10 @@ module Test::Unit
 
       class << self
         def included(mod)
-          ::RR.trim_backtrace = true
           mod.module_eval do
             setup :before => :prepend
             def setup_rr
-              ::RR.reset
+              ::Test::Unit::RR::Adapter.reset
             end
 
             cleanup :after => :append
@@ -54,6 +53,11 @@ module Test::Unit
               handled
             end
           end
+        end
+
+        def reset
+          ::RR.reset
+          ::RR.trim_backtrace = true
         end
       end
 
@@ -89,13 +93,13 @@ module Test::Unit
         begin
           ::RR.verify
         ensure
-          ::RR.reset
+          ::Test::Unit::RR::Adapter.reset
         end
         result = yield
         begin
           ::RR.verify
         ensure
-          ::RR.reset
+          ::Test::Unit::RR::Adapter.reset
         end
         result
       end
