@@ -1,5 +1,11 @@
 # News
 
+## 1.0.5: 2016-01-18 {#version-1-0-5}
+
+### Fixes
+
+* Fixed a bug that needless backtrace is showed in `assert_receive`.
+
 ## 1.0.4: 2016-01-17 {#version-1-0-4}
 
 ### Improvements
