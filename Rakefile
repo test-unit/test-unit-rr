@@ -23,6 +23,7 @@ require "bundler/gem_helper"
 require "packnga"
 
 base_dir = File.join(File.dirname(__FILE__))
+html_base_dir = File.join(base_dir, "doc", "html")
 
 helper = Bundler::GemHelper.new(base_dir)
 def helper.version_tag
@@ -36,7 +37,14 @@ Packnga::DocumentTask.new(spec) do |task|
   task.translate_languages = ["ja"]
 end
 
-Packnga::ReleaseTask.new(spec) do
+Packnga::ReleaseTask.new(spec) do |task|
+  test_unit_github_io_dir_candidates = [
+    "../../www/test-unit.github.io",
+  ]
+  test_unit_github_io_dir = test_unit_github_io_dir_candidates.find do |dir|
+    File.directory?(dir)
+  end
+  task.index_html_dir = test_unit_github_io_dir
 end
 
 desc "Run tests"
