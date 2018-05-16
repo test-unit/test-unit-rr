@@ -69,21 +69,17 @@ module Test::Unit
       # clear your double declarations scope.
       #
       # @example Success case
+      #   subject = Object.new
       #   assert_rr do
-      #     subject = Object.new
-      #     assert_rr do
-      #       mock(subject).should_be_called
-      #       subject.should_be_called
-      #     end
+      #     mock(subject).should_be_called
+      #     subject.should_be_called
       #   end
       #
       # @example Failure case
+      #   subject = Object.new
       #   assert_rr do
-      #     subject = Object.new
-      #     assert_rr do
-      #       mock(subject).should_be_called
-      #       # subject.should_be_called
-      #     end
+      #     mock(subject).should_be_called
+      #     # subject.should_be_called
       #   end
       #
       # @yield
