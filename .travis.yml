@@ -8,8 +8,8 @@ rvm:
 env:
   - JRUBY_OPTS="-Xcext.enabled=true"
 notifications:
-  recipients:
-    - test-unit-commit@googlegroups.com
+  webhooks:
+    - https://webhook.commit-email.info/
 # matrix:
 #   allow_failures:
 #     - rvm: rbx
