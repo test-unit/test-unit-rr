@@ -38,7 +38,6 @@ Gem::Specification.new do |spec|
   spec.files = ["README.md", "Rakefile", "#{spec.name}.gemspec", "Gemfile"]
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("doc/text/**/*.*")
-  spec.test_files += Dir.glob("test/**/*")
 
   spec.add_dependency("test-unit", ">= 2.5.2")
   spec.add_dependency("rr", ">= 1.1.1")
