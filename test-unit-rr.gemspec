@@ -1,6 +1,6 @@
-# -*- mode: ruby; coding: utf-8 -*-
+# -*- mode: ruby -*-
 #
-# Copyright (C) 2012-2013  Kouhei Sutou <kou@clear-code.com>
+# Copyright (C) 2012-2026  Sutou Kouhei <kou@clear-code.com>
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   entries = readme.split(/^\#\#\s(.*)$/)
   description = clean_white_space.call(entries[entries.index("Description") + 1])
   spec.summary, spec.description, = description.split(/\n\n+/, 3)
-  spec.license = "LGPLv2 or later"
+  spec.license = "LGPL-2.1-or-later"
   spec.files = ["README.md", "Rakefile", "#{spec.name}.gemspec", "Gemfile"]
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("doc/text/**/*.*")
